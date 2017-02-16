@@ -1,0 +1,36 @@
+<md-toolbar style="position: fixed;">
+  <div class="md-toolbar-tools">
+      <h2 class="flex">CP Placas Eletrônicas</h2>
+      <p style="font-size: 8px; flex"> Versão: 0.0.1 - 20160126</p>
+  </div>
+</md-toolbar>  
+
+<md-content layout="row" layout-align="center center" style="padding-top: 64px;">
+  <md-card flex flex-gt-md="50" flex-md="66"> 
+    <md-card-content>
+      <h2 class="md-title">Login</h2>
+      <form novalidate name="form">
+        <md-input-container ng-class="{'invalid-label' : showUsernameError()}" class="md-icon-float" flex>
+          <label>Username</label>
+          <md-icon md-font-set="material-icons">perm_identity</md-icon>
+          <input name="username" ng-model="user.username" ng-class="{'invalid-field' : showUsernameError()}" required>
+          <div ng-show="showUsernameError()" ng-messages="user.username.$error">
+            <div ng-message="required" ng-show="form.username.$error.required">{{errorMessages.required_field}}</div>
+            <div ng-message="login_invalid" ng-show="form.username.$error.login_invalid">{{errorMessages.users_login_invalid}}</div>
+          </div>
+        </md-input-container>
+        <md-input-container ng-class="{'invalid-label' : showPasswordError()}" class="md-icon-float" flex>
+          <label>Password</label>
+          <md-icon md-font-set="material-icons">lock</md-icon>
+          <input name="password" type="password" ng-model="user.password" ng-class="{'invalid-field' : showPasswordError()}" required>
+          <div ng-show="showPasswordError()" ng-messages="user.password.$error">
+            <div ng-message="required">{{errorMessages.required_field}}</div>
+          </div>          
+        </md-input-container>
+        <div class="md-actions" layout="row" layout-align="end center">
+          <md-button class="md-raised md-primary" ng-click="login(user)" ng-disabled="btnLoginDisabled">Login</md-button>
+        </div>        
+      </form>           
+    </md-card-content>    
+  </md-card>  
+</md-content>

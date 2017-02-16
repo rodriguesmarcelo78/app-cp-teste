@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" ng-app="cpPlacasEletronicasWebApp">
   <head>
-    <title>NodeJS Starter Application</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>CP Placas Eletronicas</title>
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet">
+    <link href='bower_components/angular-loading-bar/build/loading-bar.min.css' rel='stylesheet' type='text/css' media='all' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
   </head>
-
   <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1 id="message">Hello World!</h1>
-          <p class='description'></p> Thanks for creating a <span class = "blue">NodeJS Starter Application</span>.
-        </td>
-      </tr>
-    </table>
+    <div ng-view></div>
+    <!-- ANGULAR MATERIAL -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>   
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
+    <!-- ANGULAR CONTROLLERS -->
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/cpplacaseletronicaswebapp/utils/validation-util.js"></script>
+    <script src="javascripts/cpplacaseletronicaswebapp/utils/error-messages.js"></script>
+    <script src="javascripts/cpplacaseletronicaswebapp/utils/toast-util.js"></script>
+    <script src="javascripts/cpplacaseletronicaswebapp/login/login.controller.js"></script>
+    <script src="javascripts/cpplacaseletronicaswebapp/login/login.service.js"></script>
+    <script src="javascripts/cpplacaseletronicaswebapp/home/home.route.js"></script>
+    <script src="javascripts/cpplacaseletronicaswebapp/home/home.controller.js"></script>
   </body>
-
 </html>
