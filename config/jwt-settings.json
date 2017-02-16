@@ -1,0 +1,8 @@
+{
+    "options" : {
+        "secretOrKey": "passw0rd",
+        "issuer": "jairrillo.com",
+        "audience": "mysite.net",
+        "expiresInMinutes" : 1440
+    }
+}
