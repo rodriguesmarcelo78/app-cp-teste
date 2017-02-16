@@ -10,7 +10,7 @@
 	//var sender = new gcm.Sender('AIzaSyBbPO9qh7R1FqJ1_ByDt87cePUB7BV3ju8');
 	//PROD
 	//var sender = new gcm.Sender('AIzaSyDzRWWMQTsckKvedh4WDXnNuJ8wpPIuFzQ');
-	var sender = new gcm.Sender((process.env.GCM_SENDER || "AIzaSyDzRWWMQTsckKvedh4WDXnNuJ8wpPIuFzQ"));
+	var sender = new gcm.Sender((process.env.GCM_SENDER || "AAAAxTpOrLg:APA91bHkHaUu8iAXd9Jshn-xK4EX_ELLZVHWCP4xtHMNT18dAkYLs_OXW8DEQDadCe7cHoYEBOWFn_EoxrSyCQkFsg3bU7bkOlFC63OVsWEE3qtl6QdzRLgvocNv-8axl6wygLd9riPn"));
 	var apnsEnv = (process.env.APNS_ENV || "sandbox");
 
 	var sendMessageAndroid = function(message) {
