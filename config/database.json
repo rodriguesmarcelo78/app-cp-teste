@@ -1,14 +1,14 @@
 {
   "development": {    
-    "mongoURL": "mongodb://jairrillo:united88@candidate.54.mongolayer.com:10755,candidate.57.mongolayer.com:10101/cpplacaseletronicas_dev?replicaSet=set-5646910c3a94353f54000253"
+    "mongoURL": "mongodb://cp-app:mamute0909@ds153729.mlab.com:53729/app-cp"
   },
   "test": {
-    "mongoURL": "mongodb://localhost/cpplacaseletronicasweb_dev"
+    "mongoURL": "mongodb://cp-app:mamute0909@ds153729.mlab.com:53729/app-cp"
   },
   "homolog": {
-	 "mongoURL": "mongodb://jairrillo:united88@candidate.54.mongolayer.com:10755,candidate.57.mongolayer.com:10101/cpplacaseletronicas_homolog?replicaSet=set-5646910c3a94353f54000253"
+	 "mongoURL": "mongodb://cp-app:mamute0909@ds153729.mlab.com:53729/app-cp"
   },
   "production": {
-    "mongoURL": "mongodb://cpplacaseletronicas:cpplacaseletronicas123@aws-us-east-1-portal.0.dblayer.com:10931/cpplacaseletronicas_prod"
+    "mongoURL": "mongodb://cp-app:mamute0909@ds153729.mlab.com:53729/app-cp"
   }
 }
