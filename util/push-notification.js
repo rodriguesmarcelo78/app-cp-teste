@@ -46,7 +46,7 @@
 
 	var sendMessageIOS = function(note) {
 		deviceModel.findIOS()
-		var apnsEnv = "production";
+		
 		.then(function (result) {
 			regTokens = result;
 			if (apnsEnv == "sandbox") {
@@ -55,12 +55,12 @@
 												cert: "./certificados/sandbox/cert.pem",
 												key: "./certificados/sandbox/key.pem" };
 			}
-			if (apnsEnv == "production") {
+			
 				var options = { production: true,
 											  passphrase: "united88",
 												cert: "./certificados/production/cert.pem",
 												key: "./certificados/production/key.pem" };
-			}
+		
 		  var apnConnection = new apn.Connection(options);
 			apnConnection.pushNotification(note, regTokens);
 			apnConnection.on("transmissionError", function (errorCode, notification, device) {
