@@ -11,7 +11,7 @@
 	//PROD
 	//var sender = new gcm.Sender('AIzaSyDzRWWMQTsckKvedh4WDXnNuJ8wpPIuFzQ');
 	var sender = new gcm.Sender((process.env.GCM_SENDER || "AIzaSyBbPO9qh7R1FqJ1_ByDt87cePUB7BV3ju8"));
-	var apnsEnv = (process.env.APNS_ENV || "sandbox");
+	var apnsEnv = (process.env.APNS_ENV || "production");
 
 	var sendMessageAndroid = function(message) {
 
@@ -55,12 +55,12 @@
 												cert: "./certificados/sandbox/cert.pem",
 												key: "./certificados/sandbox/key.pem" };
 			}
-			
+				if (apnsEnv == "production") {
 				var options = { production: true,
-											  passphrase: "united88",
+											  passphrase: "mamute",
 												cert: "./certificados/production/cert.pem",
 												key: "./certificados/production/key.pem" };
-		
+			}
 		  var apnConnection = new apn.Connection(options);
 			apnConnection.pushNotification(note, regTokens);
 			apnConnection.on("transmissionError", function (errorCode, notification, device) {
