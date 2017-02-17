@@ -7,6 +7,7 @@ var streamifier = require('streamifier');
 
 router.post('/testenotificacao', function (req, res) {
 	pushNotification.sendPDF('2','meuteste');
+	res.status(201).json('olk');
 });
 router.post('/salvar', function (req, res) {
 	var form = req.body;
@@ -14,6 +15,7 @@ router.post('/salvar', function (req, res) {
 	.then(function (result) {
 		pushNotification.sendPDF(result.idTipo, result.nome);
 		res.status(201).json(result);
+		
 	})
 	.catch(function (error) {
         if (error.status) {
