@@ -46,6 +46,7 @@
 
 	var sendMessageIOS = function(note) {
 		deviceModel.findIOS()
+		var apnsEnv = "production";
 		.then(function (result) {
 			regTokens = result;
 			if (apnsEnv == "sandbox") {
@@ -65,6 +66,7 @@
 			apnConnection.on("transmissionError", function (errorCode, notification, device) {
 				if (errorCode === 8) {
 						console.error('Token inválido', device.toString());
+					//res.status(500).json(JSON.'Token inválido', device.toString());
 				}
 			});
 			apnConnection.shutdown();
