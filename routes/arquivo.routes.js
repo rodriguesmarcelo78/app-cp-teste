@@ -16,7 +16,7 @@ router.post('/salvar', function (req, res) {
         if (error.status) {
             res.status(error.status).json(error.errorMessage);
         } else {
-            res.status(500).json(JSON.stringify(error));
+            res.status(500).json('xxx'+JSON.stringify(error));
         }
 	});
 });
