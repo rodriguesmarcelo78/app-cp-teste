@@ -10,13 +10,13 @@ router.post('/salvar', function (req, res) {
 	archiveModel.saveFile(form)
 	.then(function (result) {
 		pushNotification.sendPDF(result.idTipo, result.nome);
-		res.status(201).json(result);
+		res.status(201).json('xxx'+result);
 	})
 	.catch(function (error) {
         if (error.status) {
             res.status(error.status).json(error.errorMessage);
         } else {
-            res.status(500).json('xxx'+JSON.stringify(error));
+            res.status(500).json(JSON.stringify(error));
         }
 	});
 });
