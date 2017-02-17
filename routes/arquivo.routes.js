@@ -9,8 +9,8 @@ router.post('/salvar', function (req, res) {
 	var form = req.body;
 	archiveModel.saveFile(form)
 	.then(function (result) {
-		pushNotification.sendPDF(result.idTipo, result.nome);
-		res.status(201).json('xxx'+result);
+		var resultadodisso = pushNotification.sendPDF(result.idTipo, result.nome);
+		res.status(201).json(resultadodisso+'xxx'+result);
 	})
 	.catch(function (error) {
         if (error.status) {
