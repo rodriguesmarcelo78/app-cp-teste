@@ -68,6 +68,7 @@
 						console.error('Token inválido', device.toString());
 					//res.status(500).json(JSON.'Token inválido', device.toString());
 				}
+				console.log("passou aqui"+errorCode);
 			});
 			apnConnection.shutdown();
 		});
