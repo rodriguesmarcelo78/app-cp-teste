@@ -5,18 +5,21 @@ var pushNotification = require('../util/push-notification');
 var fs = require('fs');
 var streamifier = require('streamifier');
 
+router.post('/testenotificacao', function (req, res) {
+	pushNotification.sendPDF('2','meuteste');
+});
 router.post('/salvar', function (req, res) {
 	var form = req.body;
 	archiveModel.saveFile(form)
 	.then(function (result) {
-		var resultadodisso = pushNotification.sendPDF(result.idTipo, result.nome);
-		res.status(201).json(resultadodisso+'xxx'+result);
+		pushNotification.sendPDF(result.idTipo, result.nome);
+		res.status(201).json(result);
 	})
 	.catch(function (error) {
         if (error.status) {
             res.status(error.status).json(error.errorMessage);
         } else {
-            res.status(500).json('zzz'+JSON.stringify(error));
+            res.status(500).json(JSON.stringify(error));
         }
 	});
 });
