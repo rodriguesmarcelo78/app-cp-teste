@@ -56,7 +56,7 @@
 												key: "./certificados/sandbox/key.pem" };
 			}
 				if (apnsEnv == "production") {
-				var options = { production: true,
+				var options = { production: false,
 											  passphrase: "mamute",
 												cert: "./certificados/sandbox/cert.pem",
 												key: "./certificados/sandbox/key.pem" };
