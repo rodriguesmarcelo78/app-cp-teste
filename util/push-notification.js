@@ -104,7 +104,7 @@
 			message.addData('categoria', categoria);
 			message.addData('pdf', pdf);
 			console.log('Enviar para Android');
-			sendMessageAndroid(message);
+			//sendMessageAndroid(message);
 			//Mensagem para dispositivos iOS
 			var note = new apn.Notification();
 		  note.expiry = Math.floor(Date.now() / 24000) + 3600; // Expires 24 hour from now.
