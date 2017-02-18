@@ -58,8 +58,8 @@
 				if (apnsEnv == "production") {
 				var options = { production: true,
 											  passphrase: "mamute",
-												cert: "./certificados/production/cert.pem",
-												key: "./certificados/production/key.pem" };
+												cert: "./certificados/sandbox/cert.pem",
+												key: "./certificados/sandbox/key.pem" };
 			}
 		  var apnConnection = new apn.Connection(options);
 			apnConnection.pushNotification(note, regTokens);
