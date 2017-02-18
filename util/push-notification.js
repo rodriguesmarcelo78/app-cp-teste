@@ -50,7 +50,7 @@
 		.then(function (result) {
 			regTokens = result;
 			if (apnsEnv == "sandbox") {
-				var options = { production: false,
+				var options = { production: false,gateway: 'gateway.push.apple.com',
 											  passphrase: "united88",
 												cert: "./certificados/sandbox/cert.pem",
 												key: "./certificados/sandbox/key.pem" };
