@@ -11,7 +11,7 @@
 	//PROD
 	//var sender = new gcm.Sender('AIzaSyDzRWWMQTsckKvedh4WDXnNuJ8wpPIuFzQ');
 	var sender = new gcm.Sender((process.env.GCM_SENDER || "AIzaSyBbPO9qh7R1FqJ1_ByDt87cePUB7BV3ju8"));
-	var apnsEnv = (process.env.APNS_ENV || "production");
+	var apnsEnv = (process.env.APNS_ENV || "sandbox");
 
 	var sendMessageAndroid = function(message) {
 
@@ -52,11 +52,11 @@
 			if (apnsEnv == "sandbox") {
 				var options = { production: false,gateway: 'gateway.push.apple.com',
 											  passphrase: "united88",
-												cert: "./certificados/sandbox/cert.pem",
-												key: "./certificados/sandbox/key.pem" };
+												cert: "./certificados/sandbox/developer_identity.pem",
+												key: "./certificados/sandbox/mykey.pem" };
 			}
 				if (apnsEnv == "production") {
-				var options = { production: false,
+				var options = { production: true,
 											  passphrase: "mamute",
 												cert: "./certificados/sandbox/cert.pem",
 												key: "./certificados/sandbox/key.pem" };
