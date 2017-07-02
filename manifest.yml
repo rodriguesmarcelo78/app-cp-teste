@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: app-cp-teste
-  host: app-cp-teste
+  name: app-cp-teste2017
+  host: app-cp-teste2017
   disk_quota: 1024M
